@@ -27,8 +27,8 @@ class _HomeViewState extends State<HomeView> {
   IconButton _buildGithubButton() {
     return IconButton(
       onPressed: () {
-        js.context
-            .callMethod('open', ['https://github.com/ahm3tcelik/dart_writer']);
+        js.context.callMethod(
+            'open', ['https://github.com/ahm3tcelik/json2dart_gen']);
       },
       icon: SvgPicture.asset(
         'assets/ic_github.svg',
