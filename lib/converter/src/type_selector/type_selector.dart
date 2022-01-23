@@ -4,6 +4,7 @@ import 'index.dart';
 class TypeSelector {
   static select(String key, dynamic value) {
     final selectors = [
+      () => BoolSelector().select(key, value),
       () => IntSelector().select(key, value),
       () => NumSelector().select(key, value),
       () => DateSelector().select(key, value),

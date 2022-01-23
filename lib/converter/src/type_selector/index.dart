@@ -1,3 +1,4 @@
+export 'bool_selector.dart';
 export 'date_selector.dart';
 export 'date_selector.dart';
 export 'int_selector.dart';

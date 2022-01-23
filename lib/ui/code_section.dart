@@ -11,7 +11,7 @@ class CodeSection extends StatefulWidget {
 
 class _CodeSectionState extends State<CodeSection> {
   final jsonHintText =
-      '{\n  "id": 1,\n  "name": "Ahmet Çelik",\n  "exp": 0.7,\n  "account": [\n    {\n    "key": "twitter",\n    "username": "ahm3tcelik72",\n    "createAt": "2018-04-23T18:25:43.511Z"\n    }\n  ],\n  "address": {\n    "country": "Turkey",\n    "city": "Batman"\n  }\n}';
+      '{\n  "id": 1,\n  "name": "Ahmet Çelik",\n  "exp": 0.7,\n  "isOnline": true,\n  "account": [\n    {\n    "key": "twitter",\n    "username": "ahm3tcelik72",\n    "createAt": "2018-04-23T18:25:43.511Z"\n    }\n  ],\n  "address": {\n    "country": "Turkey",\n    "city": "Batman"\n  }\n}';
 
   final classNameController = TextEditingController();
   final jsonController = TextEditingController();

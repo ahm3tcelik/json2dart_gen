@@ -3,6 +3,7 @@ import 'string_extension.dart';
 enum FieldType {
   num,
   int,
+  bool,
   string,
   list,
   object,
@@ -21,6 +22,9 @@ class Field {
     switch (type) {
       case FieldType.list:
         value = 'List<${genericName.capitalize}>';
+        break;
+      case FieldType.bool:
+        value = 'bool';
         break;
       case FieldType.int:
         value = 'int';
