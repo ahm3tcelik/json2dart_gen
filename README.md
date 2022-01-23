@@ -1,16 +1,16 @@
-# json2dart_gen
+# json2dart_gen 
 
-A new Flutter project.
+Open source JSON to Dart Converter.
 
-## Getting Started
+### Features
+- Null safety
+- Supported Types: int, string, num, DateTime, List, Custom object
+- Show generated code in embedded DartPad.
 
-This project is a starting point for a Flutter application.
+Code generation by 💪 [dart_writer](https://github.com/ahm3tcelik/dart_writer)
 
-A few resources to get you started if this is your first Flutter project:
+## Demo 
+URL: https://ahm3tcelik.github.io/json2dart_gen
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![image](https://user-images.githubusercontent.com/37306467/150659915-9ac66a73-ef77-4bc0-b929-f5acf20bcf91.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
