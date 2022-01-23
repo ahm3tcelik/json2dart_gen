@@ -77765,7 +77765,7 @@ return new A.z_(new A.v0(B.ZO,r,new A.T1(s,s,1/0,56),s),B.VC,s)},
 a6W(){return A.a2e(null,A.au9("assets/ic_github.svg",B.k,30,30),30,new A.afk(),30,null)},
 a73(){return A.a2e(null,A.au9("assets/ic_twitter.svg",B.k,30,30),30,new A.afl(),30,null)}}
 A.afk.prototype={
-$0(){$.l6().lg("open",["https://github.com/ahm3tcelik/dart_writer"])},
+$0(){$.l6().lg("open",["https://github.com/ahm3tcelik/json2dart_gen"])},
 $S:0}
 A.afl.prototype={
 $0(){$.l6().lg("open",["https://twitter.com/ahm3tcelik72"])},
