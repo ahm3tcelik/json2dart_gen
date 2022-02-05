@@ -1,4 +1,5 @@
 import 'package:dart_pad_widget/dart_pad_widget.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:json2dart_gen/converter/json2dart_gen.dart';
 
@@ -10,6 +11,8 @@ class CodeSection extends StatefulWidget {
 }
 
 class _CodeSectionState extends State<CodeSection> {
+  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
   final jsonHintText =
       '{\n  "id": 1,\n  "name": "Ahmet Çelik",\n  "exp": 0.7,\n  "isOnline": true,\n  "account": [\n    {\n    "key": "twitter",\n    "username": "ahm3tcelik72",\n    "createAt": "2018-04-23T18:25:43.511Z"\n    }\n  ],\n  "address": {\n    "country": "Turkey",\n    "city": "Batman"\n  }\n}';
 
@@ -31,6 +34,12 @@ class _CodeSectionState extends State<CodeSection> {
         classNameController.text.trim().isNotEmpty) {
       final code =
           Converter.convert(classNameController.text, jsonController.text);
+
+      analytics.logEvent(name: 'CONVERT_JSON', parameters: {
+        'className': classNameController.text,
+        'input': jsonController.text,
+        'output': code
+      });
 
       setState(() {
         codeResult = code;

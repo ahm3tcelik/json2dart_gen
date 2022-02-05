@@ -1,5 +1,6 @@
 import 'dart:js' as js;
 
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,6 +14,8 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +30,7 @@ class _HomeViewState extends State<HomeView> {
   IconButton _buildGithubButton() {
     return IconButton(
       onPressed: () {
+        analytics.logEvent(name: 'VIEW_GITHUB');
         js.context.callMethod(
             'open', ['https://github.com/ahm3tcelik/json2dart_gen']);
       },
@@ -44,6 +48,7 @@ class _HomeViewState extends State<HomeView> {
   IconButton _buildTwitterButton() {
     return IconButton(
       onPressed: () {
+        analytics.logEvent(name: 'VIEW_TWITTER');
         js.context.callMethod('open', ['https://twitter.com/ahm3tcelik72']);
       },
       icon: SvgPicture.asset(
